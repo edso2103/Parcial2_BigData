@@ -34,7 +34,7 @@ jobs:
           ls
           source env/bin/activate
           pip install -r requirements.txt
-          pytest
+        
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -42,3 +42,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN}}
           aws-region: us-east-1
+          
+          run:   pytest
