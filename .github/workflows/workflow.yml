@@ -44,3 +44,10 @@ jobs:
           aws-region: us-east-1
           
           run:   pytest
+      - name: flake8
+        run: |
+          pip install flake8
+          flake8 newsFinal.py
+          flake8 noticias.py
+          flake8 test_newsFinal.py
+          flake8 test_noticias.py
