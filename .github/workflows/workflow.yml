@@ -51,8 +51,8 @@ jobs:
           flake8 noticias.py
           flake8 test_newsFinal.py
           flake8 test_noticias.py
-       -name: Update code
+      - name: Update code
         run: |
-        aws s3 cp s3://aws-glue-assets-263715384879-us-east-1/scripts/
-        aws s3 cp s3://aws-glue-assets-263715384879-us-east-1/scripts/newsFinal.py
+          aws s3 cp noticias.py s3://aws-glue-assets-263715384879-us-east-1/scripts/
+          aws s3 cp newsFinal.py s3://aws-glue-assets-263715384879-us-east-1/scripts/
           
